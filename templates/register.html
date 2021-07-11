@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+
+    <form action="/register" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="password" placeholder="Password" type="password">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="confirmation" placeholder="Password (again)" type="password">
+        </div>
+        <div class="form-control">
+            Register as: <select name="subscriber">
+                <option value="donor">Donor</option>
+                <option value="school">School Administrator</option>
+                <option value="student">Student</option>
+                <option value="engineer">Software Engineer/Company</option>
+                <option value="technician">Electronics technician</option>
+                <option value="driver">Driver</option>
+                <option value="general">General Volunteer</option>
+            </select>
+        </div>
+        <button class="btn btn-primary" type="submit">Register</button>
+    </form>
+
+{% endblock %}
