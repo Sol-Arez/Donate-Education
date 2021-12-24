@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Apply
+{% endblock %}
+
+{% block main %}
+
+<form action="/apply" method="POST">
+  
+    <h5>Applicant Information:</h5><br>
+    <div class="form-group">
+        <label for="name">Full Name:&nbsp;</label>
+        <input autocomplete="off" autofocus class="form-control" id="name" name="name" type="text" required><br><br>
+        <label for="email">Email:&nbsp;</label>
+        <input autocomplete="off" class="form-control" id="email" name="email" type="email"><br><br>
+        <label for="phone">Phone:&nbsp;</label>
+        <input autocomplete="off" class="form-control" id="phone" name="phone" type="tel" required><br><br>
+        <label for="region">Province:&nbsp;</label>
+        <input autocomplete="off" class="form-control" id="region" name="region" type="text" required><br><br>
+        <label for="age">How old are you?&nbsp;</label>
+        <input autocomplete="off" class="form-control" id="age" name="age" type="number" required><br><br>     
+    </div>
+    
+        <button class="btn btn-primary" type="submit">Apply</button><br><br>
+    <p></p>
+</form>
+
+{% endblock %}

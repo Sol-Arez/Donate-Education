@@ -5,7 +5,56 @@
 {% endblock %}
 
 {% block main %}
+<div class="row">
+    <div class="column">
+    <form action="/donate" method="POST">
+        
+        <h5>Donor Information:</h5><br>
+        <div class="form-group">
+            <label for="name">Full Name:&nbsp;</label>
+            <input autocomplete="off" autofocus class="form-control" id="name" name="name" type="text" required><br><br>
+            <label for="email">Email:&nbsp;</label>
+            <input autocomplete="off" class="form-control" id="email" name="email" type="email"><br><br>
+            <label for="phone">Phone:&nbsp;</label>
+            <input autocomplete="off" class="form-control" id="phone" name="phone" type="tel" required><br><br>       
+        </div>
+        <h5>Device Information:</h5><br>
+        <div class="form-group">
+            <label for="device">Device:&nbsp;</label>
+            <select name="device" class="form-control" required>
+                <option value="" selected disabled>Please Select</option>
+                <option value="smartphone">Smartphone</option>
+                <option value="laptop">Laptop</option>
+                <option value="tablet">Tablet</option>
+                <option value="charger">Charger</option>
+                <option value="mouse">Mouse</option>
+                <option value="speaker">Speaker</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="manufacturer">Manufacturer:&nbsp;</label>
+            <input autocomplete="off" class="form-control" id="manufacturer" name="manufacturer" type="text" required><br><br>
+            <label for="model">Model: </label>
+            <input autocomplete="off" class="form-control" id="model" name="model" type="text" required><br><br>
+            <label for="age">Age of Device (Years):&nbsp;</label>
+            <input autocomplete="off" class="form-control" id="age" name="age" type="number" required><br><br>
 
+            Data Wiped?&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="yes-no" id="yes" value="Yes">
+            <label for="yes">Yes&nbsp;</label>
+            <input type="radio" name="yes-no" id="no" value="No">
+            <label for="no">No&nbsp;</label>
+            <input type="radio" name="yes-no" id="NA" value="NA">
+            <label for="NA">N/A</label><br><br>       
+        </div>
+        <button class="btn btn-primary" type="submit">Donate</button>
+        
+    </form>
+    </div>
     
-
-{% endblock %}
+    <div class="column">
+        <img src="https://images.unsplash.com/photo-1578357078586-491adf1aa5ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Kindly donate education to children" width="400" height="500">
+    </div>
+</div>
+    
+{% endblock %} 

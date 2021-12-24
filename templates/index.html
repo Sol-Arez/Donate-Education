@@ -1,13 +1,81 @@
 {% extends "layout.html" %}
 
 {% block title %}
-
-Index
-
+    Index
 {% endblock %}
-{% block main %}
 
-    Your Contributions
-    Your Donations
+{% block main %}
+{% if don %}
+
+    <table style="width: 100%;" class="table table-striped">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Device</th>
+            <th>Manufacturer</th>
+            <th>Model</th>
+            <th>Age of Device</th>
+        </tr>
+        {% for donation in donations %}
+        <tr>
+            <td>{{ donation[1] }}</td>
+            <td>{{ donation[2] }}</td>
+            <td>{{ donation[3] }}</td>
+            <td>{{ donation[4] }}</td>
+            <td>{{ donation[5] }}</td>
+            <td>{{ donation[6] }}</td>
+            <td>{{ donation[7] }}</td>
+        </tr>
+        {% endfor %}
+    </table> 
+{% endif %}
+{% if vol %}
+
+    <table style="width: 100%;" class="table table-striped">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Province</th>
+            <th>Profession</th>
+            <th>Quantity</th>
+            <th>Date</th>
+        </tr>
+        {% for contribution in contributions %}
+        <tr>
+            <td>{{ contribution[1] }}</td>
+            <td>{{ contribution[2] }}</td>
+            <td>{{ contribution[3] }}</td>
+            <td>{{ contribution[4] }}</td>
+            <td>{{ contribution[5] }}</td>
+            <td>{{ contribution[6] }}</td>
+            <td>{{ contribution[7] }}</td>
+        </tr>
+        {% endfor %}
+    </table> 
+{% endif %}
+{% if app %}
+
+    <table style="width: 100%;" class="table table-striped">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Province</th>
+            <th>Age</th>
+        </tr>
+        {% for application in applications %}
+        <tr>
+            <td>{{ application[1] }}</td>
+            <td>{{ application[2] }}</td>
+            <td>{{ application[3] }}</td>
+            <td>{{ application[4] }}</td>
+            <td>{{ application[5] }}</td>
+        </tr>
+        {% endfor %}
+    </table> 
+{% endif %}
+    
 
 {% endblock %}
