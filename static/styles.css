@@ -4,5 +4,20 @@ nav .navbar-brand
 }
 nav .navbar-brand .blue
 {
-    color: #537fbe;
+    color: #3b88f5;
+}
+main .form-control
+{
+    display: inline-block;
+    width: auto;
+}
+main
+{
+    overflow-x: auto;
+    text-align: center;
+}
+.column
+{
+    float: left;
+    width: 50%;
 }
